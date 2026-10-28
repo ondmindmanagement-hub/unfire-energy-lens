@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="dark"><meta name="description" content="Unfire Energy Lens: a no-cost illustrative energy affordability prototype with human-governed actions.">
+<title>Unfire Energy Lens — Affordability by Design</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top"><a class="brand" href="#home"><span class="mark">U</span><span>UNFIRE <small>ENERGY LENS</small></span></a><span class="topnote">GLOBAL ENERGY HACKATHON 2026 · DIGITAL SOLUTIONS</span><a class="toplink" href="#method">METHOD & LIMITS <span aria-hidden="true">↗</span></a></header>
+<main id="home">
+<section class="hero">
+ <div class="eyebrow"><span class="pulse"></span> INTERACTIVE RESEARCH PROTOTYPE · ENGLISH</div>
+ <h1>Understand energy costs.<br><em>Keep people in control.</em></h1>
+ <p>Explore an illustrative household or community-service energy scenario, examine the assumptions behind potential savings, and see which actions a human must approve.</p>
+ <div class="herofoot"><span><b>01</b> Transparent assumptions</span><span><b>02</b> Read-only analysis</span><span><b>03</b> Explicit human authority</span></div>
+</section>
+<div class="notice" role="note"><span class="noticeicon">i</span><div><b>Demonstration, not live utility data.</b> All rates and consumption figures below are editable synthetic examples, not local market quotes, forecasts, verified customer savings or financial advice. No third-party services are contacted.</div></div>
+<section class="workspace" aria-label="Energy affordability calculator">
+ <div class="controls panel"><div class="sectionhead"><span>01 / SCENARIO INPUTS</span><span class="subtle">Edit to explore</span></div>
+ <div class="switch" role="group" aria-label="Illustrative scenario"><button id="house" class="active" aria-pressed="true">HOUSEHOLD</button><button id="clinic" aria-pressed="false">COMMUNITY CLINIC</button></div>
+ <label for="usage">Estimated monthly usage <output id="usageOut">420 kWh</output></label><input id="usage" type="range" min="0" max="5000" value="420" step="10">
+ <label for="peakShare">Peak-hour share <output id="peakOut">60%</output></label><input id="peakShare" type="range" min="0" max="100" value="60" step="5">
+ <div class="twocol"><div><label for="peakRate">Peak rate <span class="suffix">USD/kWh</span></label><input id="peakRate" type="number" min="0" max="10" step="0.01" value="0.28" inputmode="decimal"></div><div><label for="offpeakRate">Off-peak rate <span class="suffix">USD/kWh</span></label><input id="offpeakRate" type="number" min="0" max="10" step="0.01" value="0.14" inputmode="decimal"></div></div>
+ <label for="shift">Peak demand feasibly shifted <output id="shiftOut">20%</output></label><input id="shift" type="range" min="0" max="100" value="20" step="5">
+ <label for="outage">Estimated outage hours / month <output id="outageOut">6 h</output></label><input id="outage" type="range" min="0" max="744" value="6" step="1">
+ <p class="smallprint">Shifting is a hypothetical behavioral scenario only. Medical and safety-critical loads must never be shifted or interrupted based on this calculator.</p>
+ <button id="reset" class="ghost">↺ RESET EXAMPLE</button>
+ </div>
+ <div class="results panel"><div class="sectionhead"><span>02 / EXPLANATION</span><span class="tag">LOCAL · NO API</span></div>
+ <p class="resulttitle">Illustrative monthly energy bill</p>
+ <div class="amounts"><div><span>BASELINE</span><strong id="baseline">$94.08</strong></div><div><span>SCENARIO</span><strong id="proposed">$87.02</strong></div></div>
+ <div class="saving"><div><span>MODELED DIFFERENCE</span><b id="saving">$7.06</b></div><span id="pct">7.5% lower</span></div>
+ <div class="bars"><div class="barlabel"><span>Baseline</span><span id="baseBarLabel">100%</span></div><div class="track"><div id="baseBar" class="bar baseline"></div></div><div class="barlabel"><span>Scenario</span><span id="scenarioBarLabel">92.5%</span></div><div class="track"><div id="scenarioBar" class="bar proposal"></div></div></div>
+ <div class="insight"><strong>Explain the result</strong><p id="explanation" aria-live="polite"></p></div>
+ <div class="safety"><b>RESILIENCE CHECK</b><p id="resilience">6 outage hours/month in the example. This is a planning input, not a reliability prediction.</p></div>
+ </div>
+</section>
+<section class="approval" aria-labelledby="approvalheading">
+ <div class="sectionhead"><span>03 / HUMAN-CONTROLLED AI WORKFLOWS</span><span class="tag">BOLT POLICY CONCEPT</span></div>
+ <div class="approvalgrid"><div><h2 id="approvalheading">An intelligent recommendation must not become an uncontrolled action.</h2><p>This independently implemented demonstration shows a deterministic policy boundary. It does not call an AI model, integrate with the commercial BOLT macOS app, connect to energy providers, or execute any external action.</p>
+ <div class="actions" role="group" aria-label="Demonstrate action policy"><button data-action="inspect">Inspect scenario</button><button data-action="draft">Prepare local draft</button><button data-action="enroll">Request provider switch</button><button data-action="autopay">Enable automatic payment</button></div>
+ </div><div class="decisionbox"><span class="eyebrow">POLICY OUTCOME</span><div id="decision" class="decision">ALLOW</div><p id="decisionReason">Read-only scenario review. No account access or side effects.</p><div id="draft" class="draft" hidden></div><span class="policyfoot">NO PROVIDER CONNECTION · NO PAYMENT · NO UNSUPERVISED EXECUTION</span></div></div>
+</section>
+<section class="method" id="method"><div class="sectionhead"><span>04 / METHODOLOGY & LIMITATIONS</span><span class="tag">OPEN PROTOTYPE</span></div><div class="methodgrid"><div><h3>The model</h3><p>Baseline = monthly kWh × weighted peak/off-peak rates. Proposed scenario moves the selected portion of peak usage to off-peak rates while conserving total energy. It does not model tariff fees, taxes, storage losses, demand charges, equipment costs or dynamic wholesale prices.</p></div><div><h3>What is real</h3><p>The controls, calculation, scenario comparison, policy classifications and local draft run in the browser. Every result follows the actual editable inputs. No personal information leaves the device and no authentication is required.</p></div><div><h3>What is proposed</h3><p>Future integration with the separate Unfire Power Energy Prices app, verified local tariffs, optional consent-driven recommendations and the broader BOLT control layer. Those are a product direction, not features implemented here.</p></div></div></section>
+<footer>UNFIRE · ENERGY LENS <span>Open-source, no-cost browser demonstration · 2026</span><a href="https://unfire.technology" rel="noopener">unfire.technology</a></footer>
+</main>
+<script type="module" src="main.js"></script>
+</body></html>

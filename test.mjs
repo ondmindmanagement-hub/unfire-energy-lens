@@ -1,0 +1,10 @@
+import {strict as assert} from 'node:assert';
+import {calculate,govern} from './app.js';
+const a=calculate({usage:420,peakShare:60,peakRate:.28,offpeakRate:.14,shift:20,outage:6});
+assert(Math.abs(a.baseline-94.08)<1e-8);assert(Math.abs(a.proposed-87.024)<1e-8);assert(Math.abs(a.savings-7.056)<1e-8);
+const b=calculate({usage:400,peakShare:50,peakRate:.10,offpeakRate:.20,shift:50,outage:1});assert(b.savings<0);
+const zero=calculate({usage:0,peakShare:0,peakRate:0,offpeakRate:0,shift:0,outage:0});assert(zero.savingsPct===0);
+assert.throws(()=>calculate({usage:-2,peakShare:0,peakRate:0,offpeakRate:0,shift:0,outage:0}));
+assert.throws(()=>calculate({usage:100,peakShare:110,peakRate:0,offpeakRate:0,shift:0,outage:0}));
+assert(govern('inspect').decision==='ALLOW');assert(govern('draft').decision==='ALLOW');assert(govern('enroll').decision==='HUMAN APPROVAL REQUIRED');assert(govern('autopay').decision==='DENY');assert(govern('anything').decision==='DENY');
+console.log('PASS 10 deterministic calculation and policy assertions');
