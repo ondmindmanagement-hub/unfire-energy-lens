@@ -12,6 +12,8 @@ python3 -m http.server 8080
 ```
 Node.js 20+ tests: `node test.mjs`.
 
+**English prerecorded demo:** [86-second captioned real-interface video](demo/Unfire_Energy_Lens_English_Demo_2026.mp4). Silent, with no calls, no synthetic audio and no fabricated live API footage.
+
 ## What actually works
 - Adjustable synthetic monthly usage, peak demand, peak/off-peak tariff examples, shift percentage and hypothetical outage hours.
 - Instant deterministic cost calculations and explanations using no live API.
