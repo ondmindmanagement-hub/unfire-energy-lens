@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#090f19">
+  <meta name="description" content="Unfire Energy Lens. An original, transparent energy affordability prototype with synthetic-data calculations, human approval and a documented competition presentation.">
+  <title>Unfire Energy Lens · Recorded demonstration</title>
+  <style>
+    :root { color-scheme:dark; --bg:#090f19;--panel:#111b29;--panel2:#132131;--text:#f4f8fc;--muted:#b0bfd0;--teal:#61dfcf;--line:#2c4155;--focus:#fff; }
+    * { box-sizing:border-box }
+    html { scroll-behavior:smooth }
+    body { margin:0;background:var(--bg);color:var(--text);font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; }
+    a { color:var(--teal);text-underline-offset:3px; }
+    a:focus-visible,video:focus-visible { outline:3px solid var(--focus);outline-offset:4px; }
+    .container { width:min(1120px,calc(100% - 40px));margin-inline:auto; }
+    .skip { position:absolute;top:-90px;left:12px;padding:12px;background:white;color:black;z-index:2; }
+    .skip:focus { top:12px; }
+    .top { border-bottom:1px solid var(--line); }
+    .nav { display:flex;gap:24px;justify-content:space-between;align-items:center;min-height:73px; }
+    .wordmark { text-decoration:none;color:var(--text);letter-spacing:.22em;font-size:.8rem;font-weight:800; }
+    .nav-links { display:flex;gap:24px;flex-wrap:wrap; }
+    .nav-links a { color:var(--muted);text-decoration:none;font-size:.85rem; }
+    .hero { padding:100px 0 68px;position:relative; }
+    .eyebrow { font-size:.77rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--teal); }
+    h1 { margin:18px 0 22px;font-size:clamp(2.8rem,8vw,6.35rem);line-height:1.04;letter-spacing:-.065em;max-width:850px; }
+    h2 { font-size:clamp(1.8rem,4vw,2.7rem);letter-spacing:-.04em;line-height:1.15;margin:0 0 16px; }
+    h3 { font-size:1.15rem;margin:0 0 8px; }
+    .lead { color:var(--muted);font-size:clamp(1.04rem,2vw,1.23rem);max-width:750px; }
+    .meta { margin-top:38px;display:flex;flex-wrap:wrap;gap:12px;color:var(--muted);font-size:.8rem; }
+    .meta span { border:1px solid var(--line);padding:7px 12px;border-radius:99px; }
+    section { padding:65px 0;border-top:1px solid var(--line); }
+    .grid { display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px; }
+    .media, .card { background:var(--panel);border:1px solid var(--line);border-radius:16px;overflow:hidden; }
+    .media video { display:block;width:100%;aspect-ratio:16/9;background:#04070b; }
+    .media-info { padding:22px 24px 24px; }
+    .media-info p,.card p { color:var(--muted);margin:6px 0 12px; }
+    .small { color:var(--muted);font-size:.91rem; }
+    .docs { display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px; }
+    .card { padding:28px;display:flex;flex-direction:column; }
+    .card a { margin-top:auto;display:inline-block; }
+    .rule { background:var(--panel2);border:1px solid var(--line);border-left:3px solid var(--teal);border-radius:12px;padding:24px;max-width:900px; }
+    .rule p { color:var(--muted);margin:10px 0 0; }
+    footer { border-top:1px solid var(--line);padding:36px 0 60px;color:var(--muted);font-size:.87rem; }
+    footer a { margin-right:24px; }
+    @media(max-width:750px) { .hero{padding:65px 0 46px} .grid,.docs{grid-template-columns:1fr} .nav{align-items:start;padding:24px 0;flex-direction:column;gap:14px} section{padding:50px 0} }
+    @media(prefers-reduced-motion:reduce) { html{scroll-behavior:auto} }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to main content</a>
+  <header class="top">
+    <div class="container nav">
+      <a class="wordmark" href="https://unfire.technology/" aria-label="Unfire homepage">UNFIRE</a>
+      <nav class="nav-links" aria-label="Page navigation">
+        <a href="#videos">Videos</a><a href="#evidence">Evidence</a><a href="#disclosure">Scope</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main">
+    <div class="container hero">
+      <p class="eyebrow">Unfire Research · Global Energy Hackathon 2026</p>
+      <h1>Energy decisions.<br>Made clear.</h1>
+      <p class="lead">A working browser-based exploration of energy affordability. Explainable calculations, explicit assumptions and human approval boundaries, demonstrated using fictional household scenarios.</p>
+      <div class="meta"><span>English presentation</span><span>Original source and media</span><span>Local processing</span><span>No paid services or customer data</span></div>
+    </div>
+    <section id="videos">
+      <div class="container">
+        <h2>See what actually works.</h2>
+        <p class="lead">Both recordings are prerecorded. They show presentation material and actual browser footage from the synthetic prototype. No person or live energy provider appears.</p>
+        <div class="grid">
+          <article class="media">
+            <video controls preload="metadata" playsinline aria-label="Play the 3 minute 13 second Unfire Energy Lens demo" src="UNFIRE_ENERGY_LENS_DEMO_20261031.mp4"></video>
+            <div class="media-info">
+              <h3>Working prototype demonstration</h3>
+              <p>3 min 13 sec. Example inputs, modeled costs and safe authorization boundaries.</p>
+              <a href="UNFIRE_ENERGY_LENS_DEMO_20261031.mp4">Open demo MP4</a>
+            </div>
+          </article>
+          <article class="media">
+            <video controls preload="metadata" playsinline aria-label="Play the 2 minute 45 second Unfire Energy Lens recorded pitch" src="UNFIRE_ENERGY_LENS_PITCH_20261031.mp4"></video>
+            <div class="media-info">
+              <h3>Recorded pitch</h3>
+              <p>2 min 45 sec. The problem, proposed value, demonstration and feasibility boundaries.</p>
+              <a href="UNFIRE_ENERGY_LENS_PITCH_20261031.mp4">Open pitch MP4</a>
+            </div>
+          </article>
+        </div>
+        <p class="small">Narration uses a synthetic operating-system voice, not a real human presenter. Downloadable MP4 files are provided for direct playback.</p>
+      </div>
+    </section>
+    <section id="evidence">
+      <div class="container">
+        <h2>Evidence and documentation.</h2>
+        <div class="docs">
+          <article class="card"><h3>Five-slide overview</h3><p>The challenge, prototype, sample arithmetic, controls and deployment roadmap.</p><a href="UNFIRE_ENERGY_LENS_PITCH_5_SLIDES.pdf">View pitch deck PDF</a></article>
+          <article class="card"><h3>One-page summary</h3><p>Target users, unit-cost assumptions, synthetic example, risks and next steps.</p><a href="UNFIRE_ENERGY_LENS_ONE_PAGE.pdf">View one-page PDF</a></article>
+          <article class="card"><h3>Executable prototype</h3><p>Source code, local deterministic checks and a live editable browser calculator.</p><a href="../">Open working demo</a><a href="https://github.com/ondmindmanagement-hub/unfire-energy-lens">Review source and tests</a></article>
+        </div>
+      </div>
+    </section>
+    <section id="disclosure">
+      <div class="container">
+        <h2>Transparent by design.</h2>
+        <div class="rule">
+          <h3>We distinguish a demonstration from a deployment.</h3>
+          <p>The application and original 86-second recording were created on 28 October, before the hackathon sprint. The competition presentation package was produced on 31 October. There is no live tariff feed, utility integration, generative AI in the calculator, verified household saving or operational pilot. Results are fictional scenario calculations, not financial advice.</p>
+          <p>Provider changes require human approval. Automatic payments are denied. The two public videos use original imagery and synthetic narration; no personal video or private data is included.</p>
+          <p><a href="DISCLOSURE.md">Read complete prior-work and AI disclosure</a></p>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer><div class="container">UNFIRE · Independent technology and innovation studio <p><a href="https://unfire.technology/">Company</a><a href="mailto:hello@unfire.technology">Contact by email</a><a href="https://github.com/ondmindmanagement-hub/unfire-energy-lens">Source repository</a></p>© 2026 Unfire. Materials for independent evaluation. No organizer endorsement or award implied.</div></footer>
+</body>
+</html>
